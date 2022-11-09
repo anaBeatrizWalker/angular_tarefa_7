@@ -14,4 +14,4 @@ completo e RA) no cabeçalho e os seguintes recursos:
 - Um componente que permita listar e manipular (incluir e remover)
   sua lista de disciplinas.
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-cxexon)
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-tarefa-7)

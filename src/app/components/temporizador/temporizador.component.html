@@ -1,0 +1,7 @@
+<h2>Temporizador: {{ temporizador.getContador() }}s</h2>
+<input #input type="text" placeholder="Intervalo" />
+<button (click)="temporizador.iniciar(input.value); input.value = ''">
+  Iniciar
+</button>
+<button (click)="temporizador.pausar()">Parar</button>
+<br />
