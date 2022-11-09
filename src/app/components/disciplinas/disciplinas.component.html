@@ -1,0 +1,87 @@
+<h2>Tabela de Disciplinas</h2>
+<div class="card text-center" style="width: 18rem;">
+  <div class="card-body">
+    <div class="mb-3">
+      <input
+        class="form-control"
+        #input
+        type="text"
+        [(ngModel)]="nome"
+        placeholder="Ex: Flutter"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        class="form-control"
+        #input
+        type="text"
+        [(ngModel)]="diaDaSemana"
+        placeholder="Ex: Segunda-feira"
+      />
+    </div>
+    <div class="mb-3">
+      <input
+        class="form-control"
+        #input
+        type="text"
+        [(ngModel)]="horario"
+        placeholder="Ex: 19:00"
+      />
+    </div>
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="
+        disciplinas.adicionarNaLista(nome, diaDaSemana, horario);
+        input.value = ''
+      "
+    >
+      Salvar
+    </button>
+  </div>
+</div>
+<br />
+<div class="card text-center" style="width: 30rem;">
+  <div class="card-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">Dia Da Semana</th>
+          <th scope="col">Horário</th>
+          <th scope="col">Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Flutter I</td>
+          <td>Segunda-feira</td>
+          <td>19:00</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="disciplinas.remover(1)"
+            >
+              Excluir
+            </button>
+          </td>
+        </tr>
+        <tr *ngFor="let disciplina of disciplinas.getLista(); index as i">
+          <td>{{ disciplina.nome }}</td>
+          <td>{{ disciplina.diaDaSemana }}</td>
+          <td>{{ disciplina.horario }}</td>
+          <td>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="disciplinas.remover(i)"
+            >
+              Excluir
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
