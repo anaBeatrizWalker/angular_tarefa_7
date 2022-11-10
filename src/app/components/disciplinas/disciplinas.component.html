@@ -53,21 +53,26 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>Flutter I</td>
-          <td>Segunda-feira</td>
-          <td>19:00</td>
+        <tr
+          *ngFor="
+            let disciplinasAntigas of disciplinas.getListaAtual();
+            index as i
+          "
+        >
+          <td>{{ disciplinasAntigas.nome }}</td>
+          <td>{{ disciplinasAntigas.diaDaSemana }}</td>
+          <td>{{ disciplinasAntigas.horario }}</td>
           <td>
             <button
               type="button"
               class="btn btn-danger"
-              (click)="disciplinas.remover(1)"
+              (click)="disciplinas.remover(i)"
             >
               Excluir
             </button>
           </td>
         </tr>
-        <tr *ngFor="let disciplina of disciplinas.getLista(); index as i">
+        <tr *ngFor="let disciplina of disciplinas.getListaNova(); index as i">
           <td>{{ disciplina.nome }}</td>
           <td>{{ disciplina.diaDaSemana }}</td>
           <td>{{ disciplina.horario }}</td>
