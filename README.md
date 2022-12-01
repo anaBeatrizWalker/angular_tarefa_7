@@ -1,8 +1,8 @@
-# angular_tarefa_7
+# ngServices_tarefa
 
-# Tarefa de Services
+## Tarefa de Services
 
-Criar um projeto de aplicação web com sua identificação (nome
+Criar um projeto de aplicação web com angular com sua identificação (nome
 completo e RA) no cabeçalho e os seguintes recursos:
 
 - Um serviço de temporizador;
@@ -13,5 +13,3 @@ completo e RA) no cabeçalho e os seguintes recursos:
   está cursando neste semestre;
 - Um componente que permita listar e manipular (incluir e remover)
   sua lista de disciplinas.
-
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-tarefa-7)
